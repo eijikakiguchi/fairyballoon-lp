@@ -1,0 +1,542 @@
+/* Base Reset & Variables */
+:root {
+    --color-bg: #FFFFFF;
+    --color-text-main: #444444;
+    --color-text-sub: #777777;
+    --color-accent-pink: #F3E5E5;
+    /* くすみピンク */
+    --color-accent-beige: #F5F1EE;
+    /* ベージュ */
+    --color-accent-text: #A68E8E;
+    /* アクセントカラーの文字色 */
+    --font-main: 'Zen Kaku Gothic New', sans-serif;
+    --font-serif: 'Noto Serif JP', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-main);
+    background-color: var(--color-bg);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Utilities */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-pale {
+    background-color: var(--color-accent-beige);
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+/* Header */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 非常に薄いグラデーションで文字を見やすく */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.2) 100%),
+        radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+    pointer-events: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.hero-content {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.main-copy {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1em;
+    /* 軽いシャドウで可読性UP */
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.sub-copy {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-family: var(--font-main);
+}
+
+.cta-guide {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta.primary {
+    /* Main CTA Style */
+}
+
+/* Secondary CTA (Instagram) */
+.cta-secondary {
+    margin-top: 2rem;
+}
+
+.insta-guide {
+    font-size: 0.8rem;
+    color: var(--color-text-sub);
+    /* #777 */
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.hero .insta-guide {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-instagram {
+    display: inline-block;
+    padding: 8px 24px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+    transition: all 0.3s;
+}
+
+.hero .btn-instagram {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+}
+
+.btn-instagram:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+    /* override default a:hover */
+}
+
+.hero .btn-instagram:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section .btn-instagram:hover,
+.footer-insta .btn-instagram:hover {
+    background-color: #fafafa;
+    border-color: #ccc;
+}
+
+/* Story Section */
+.story {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.story-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+/* About Section */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-accent-text);
+}
+
+.section-subtitle {
+    display: block;
+    font-size: 0.9rem;
+    font-family: var(--font-main);
+    color: var(--color-text-sub);
+    margin-top: 0.5rem;
+    letter-spacing: 0.2em;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Profile Section */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.profile-text .name {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent-text);
+}
+
+/* Services */
+.service-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.service-item {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--color-accent-beige);
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-accent-text);
+}
+
+.service-item p {
+    color: var(--color-text-sub);
+}
+
+.menu-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    letter-spacing: 0.1em;
+}
+
+.service-note {
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: 0.8rem;
+    line-height: 1.4;
+}
+
+.service-message-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.service-message {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--color-accent-beige);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    line-height: 1.8;
+}
+
+/* Catalog */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.catalog-item {
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.catalog-item img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.catalog-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.catalog-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-accent-text);
+}
+
+.catalog-info p {
+    font-size: 0.75rem;
+    color: var(--color-text-sub);
+    line-height: 1.5;
+}
+
+.catalog-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.price-guide {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid var(--color-accent-beige);
+}
+
+.price-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--color-accent-text);
+}
+
+.price-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+    display: inline-block;
+}
+
+.price-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.price-label {
+    font-weight: 500;
+    min-width: 140px;
+}
+
+.price-value {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+}
+
+.price-note {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.price-message {
+    font-size: 0.85rem;
+    color: var(--color-text-sub);
+    line-height: 1.6;
+}
+
+/* Testimonials */
+.voice-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.voice-bubble {
+    background: var(--color-accent-pink);
+    padding: 1rem 1.5rem;
+    border-radius: 50% 50% 50% 0;
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.achievement-images {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.achievement-images img {
+    height: 200px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.insta-after-works {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Closing */
+.closing {
+    text-align: center;
+    padding: 80px 0 40px;
+}
+
+.closing-message {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.big-btn {
+    padding: 15px 50px;
+    font-size: 1.1rem;
+    background-color: #648D78;
+    /* LINEの緑に近いが少しおしゃれに */
+    background-color: #333;
+    /* あるいはシックに黒 */
+    color: #fff;
+}
+
+.footer-insta {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 4rem;
+    font-size: 0.7rem;
+    color: #ccc;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive PC */
+@media (min-width: 768px) {
+    .main-copy {
+        font-size: 3rem;
+    }
+
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .service-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
