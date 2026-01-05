@@ -529,6 +529,15 @@ a:hover {
 .faq-item {
     border-bottom: 1px solid #ddd;
     margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+details.faq-item[open] {
+    background-color: #FBF9F6; /* 少し白寄りのアイボリー/ミルクベージュ */
+    border-bottom-color: transparent;
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .faq-question {
@@ -589,7 +598,7 @@ details[open] .faq-icon::after {
 
 .faq-answer {
     padding-bottom: 1.5rem;
-    color: var(--color-text-sub);
+    color: #555555; /* 可読性改善: #777 -> #555 */
     font-size: 0.95rem;
     line-height: 1.8;
 }
