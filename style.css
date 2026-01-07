@@ -3,6 +3,8 @@
     --color-bg: #FFFFFF;
     --color-text-main: #444444;
     --color-text-sub: #777777;
+    --color-text-readable: #605850;
+    /* 濃いグレージュ: 可読性改善 */
     --color-accent-pink: #F3E5E5;
     /* くすみピンク */
     --color-accent-beige: #F5F1EE;
@@ -318,7 +320,7 @@ a:hover {
 
 .service-note {
     font-size: 0.7rem;
-    color: #999;
+    color: var(--color-text-readable);
     margin-top: 0.8rem;
     line-height: 1.4;
 }
@@ -381,7 +383,7 @@ a:hover {
 .catalog-note {
     text-align: center;
     font-size: 0.8rem;
-    color: #999;
+    color: var(--color-text-readable);
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
@@ -431,13 +433,13 @@ a:hover {
 
 .price-note {
     font-size: 0.8rem;
-    color: #999;
+    color: var(--color-text-readable);
 }
 
 .price-message {
-    font-size: 0.85rem;
-    color: var(--color-text-sub);
-    line-height: 1.6;
+    font-size: 0.95rem;
+    color: var(--color-text-readable);
+    line-height: 1.8;
 }
 
 /* Testimonials */
@@ -598,16 +600,19 @@ details[open] .faq-icon::after {
 
 .faq-answer {
     padding-bottom: 1.5rem;
-    color: #555555; /* 可読性改善: #777 -> #555 */
-    font-size: 0.95rem;
-    line-height: 1.8;
+    color: var(--color-text-readable);
+    /* #605850 */
+    font-size: 1rem;
+    /* 14-16px目安 */
+    line-height: 1.9;
+    /* ゆったり */
 }
 
 .faq-answer .note {
     display: block;
     margin-top: 0.5rem;
     font-size: 0.8rem;
-    color: #999;
+    color: var(--color-text-readable);
 }
 
 .faq-contact {
