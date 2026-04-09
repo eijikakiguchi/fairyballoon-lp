@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap');
+
+:root {
+  --color-base: #fdfbf9; /* やわらかな生成り・白に少しの温もり */
+  --color-text: #59534e; /* ダークグレイージュ。黒より優しく */
+  --color-text-light: #8e867f;
+  --color-accent: #d8c3af; /* 控えめで上品なくすみベージュゴールド */
+  --color-pure-white: #ffffff;
+  
+  --font-serif: 'Shippori Mincho', serif;
+  --font-sans: 'Zen Kaku Gothic Antique', sans-serif;
+  
+  --spacing-section: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  background-color: var(--color-base);
+  line-height: 2;
+  letter-spacing: 0.08em;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 共通ユーティリティ */
+.container {
+  max-width: 600px; /* スマホファーストで、PCでも細めで読みやすい幅 */
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title-large {
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+}
+
+.title-medium {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.text-body {
+  font-size: 15px;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.text-small {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+}
+
+/* セクション間隔 */
+.section {
+  padding: var(--spacing-section) 0;
+}
+.section-light {
+  background-color: var(--color-pure-white);
+}
+
+/* アニメーション用クラス */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*-----------------------------------
+  1. ファーストビュー
+-----------------------------------*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7; /* テキストが読みやすいように少しだけ透過 */
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(253, 251, 249, 0.4) 0%, rgba(253, 251, 249, 0.9) 100%);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.hero-sub {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--color-text);
+  letter-spacing: 0.15em;
+}
+
+.hero-title {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.hero-desc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+/*-----------------------------------
+  ボタン（CTA）
+-----------------------------------*/
+.btn-wrap {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-text);
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(89, 83, 78, 0.15);
+  cursor: pointer;
+  border: 1px solid var(--color-text);
+}
+
+.btn:hover {
+  background-color: var(--color-pure-white);
+  color: var(--color-text);
+}
+
+.btn-icon {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.btn-caption {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-text-light);
+  margin-top: 8px;
+}
+
+/*-----------------------------------
+  共通イメージブロック
+-----------------------------------*/
+.image-block {
+  margin: 40px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+/*-----------------------------------
+  4. 商品紹介パート（カード風）
+-----------------------------------*/
+.product-card {
+  background: var(--color-pure-white);
+  border: 1px solid #efebea;
+  border-radius: 8px;
+  padding: 32px 24px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.product-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.product-price small {
+  font-size: 12px;
+}
+
+.product-details-list {
+  list-style: none;
+  margin: 32px 0;
+  text-align: left;
+  border-top: 1px solid #efebea;
+  padding-top: 24px;
+}
+
+.product-details-list li {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #efebea;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*-----------------------------------
+  フッター等
+-----------------------------------*/
+.footer {
+  text-align: center;
+  padding: 60px 24px;
+  background-color: var(--color-pure-white);
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-accent);
+  margin: 40px auto;
+}
