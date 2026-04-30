@@ -469,5 +469,36 @@
       // images フォルダの画像が fv_image.png などに正しくリネームされていればそのまま表示される
     });
   </script>
+
+  <!-- Google BudouX for Japanese word wrapping -->
+  <script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 適用したいテキスト要素のセレクタ
+      const selectors = [
+        '.hero-copy', 
+        '.hero-subcopy', 
+        '.concept-text p', 
+        '.section-title', 
+        '.shop-catchphrase', 
+        '.shop-description',
+        '.venue-text-body p',
+        '.closing-title',
+        '.closing-text'
+      ];
+      
+      const elements = document.querySelectorAll(selectors.join(', '));
+      
+      if (typeof budoux !== 'undefined') {
+        const parser = budoux.loadDefaultJapaneseParser();
+        elements.forEach(el => {
+          // 要素にクラスを追加してCSSの word-break: keep-all; を適用
+          el.classList.add('phrase-wrap');
+          // BudouXで改行可能な位置に <wbr> を挿入
+          parser.applyToElement(el);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
