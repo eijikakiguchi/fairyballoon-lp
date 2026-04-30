@@ -1,1 +1,472 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- OGP / Meta Tags -->
+  <title>And Gift VOL.3 | ときめきに、出会う一日。</title>
+  <meta name="description" content="2026年5月31日（日）和歌山の結婚式場「ラシュレディアコート」で開催されるマルシェイベント。ギフト・雑貨・ワークショップが集まる、心ほどけるマルシェです。">
+  <meta property="og:title" content="And Gift VOL.3 | ときめきに、出会う一日。">
+  <meta property="og:description" content="ギフト・雑貨・ワークショップが集まる、心ほどけるマルシェ。ラシュレディアコート和歌山にて開催。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/andgift">
+  <meta property="og:image" content="https://example.com/andgift/assets/images/ogp.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="app-container">
+    
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="hero-img-wrap">
+        <!-- フライヤー画像（IMG_2202）を配置 -->
+        <img src="assets/images/IMG_2202.jpg" alt="And Gift VOL.3 フライヤー" id="fv-img">
+      </div>
+      <div class="hero-content">
+        <h2 class="hero-copy">ときめきに、<br>出会う一日。</h2>
+        <p class="hero-subcopy">ギフト・雑貨・ワークショップが集まる、<br>心ほどけるマルシェ</p>
+        
+        <div class="hero-info">
+          <div>And Gift VOL.3</div>
+          <div class="date">2026.5.31 sun</div>
+          <div>10:00-16:00</div>
+          <div style="font-size: 0.9rem; margin-top: 0.5rem;">ラシュレディアコート和歌山</div>
+        </div>
+        
+        <div class="hero-actions">
+          <a href="https://www.instagram.com/lienstyle2025/" target="_blank" rel="noopener noreferrer" class="btn">Instagramで最新情報を見る</a>
+          <a href="#info" class="btn btn-outline">会場情報を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Concept Section -->
+    <section class="concept bg-white">
+      <h2 class="section-title">ときめくギフトと雑貨で、<br>ご縁をつなぐ。</h2>
+      <div class="concept-text">
+        <p>私たち Lien style は、<br>ギフトやデザインに携わる3人が集まり、<br>“ときめくギフトと雑貨でご縁をつなぐ”<br>という想いから生まれたイベントチームです。</p>
+        <p>想いを届ける人と、受け取る人。<br>その間に生まれる、やさしい時間。</p>
+        <p>And Giftは、そんな“つながり”を感じる<br>マルシェです。</p>
+      </div>
+    </section>
+
+    <!-- 3. Charm Section -->
+    <section class="charm bg-green">
+      <h2 class="section-title">And Gift の魅力</h2>
+      <div class="charm-image-wrapper">
+        <img src="assets/images/charm_workshop.jpg" alt="And Gift の魅力 ワークショップ" class="charm-main-img">
+      </div>
+    </section>
+
+    <!-- 4. Vendors Section -->
+    <section class="vendors bg-white">
+      <h2 class="section-title">出店者のご紹介</h2>
+      
+      <div class="shop-list">
+        
+        <!-- 1. Fairy Balloon -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Fairy_Balloon.jpg" alt="Fairy Balloon">
+            </div>
+            <div class="shop-catchphrase">想いを、かたちにする。世界にひとつのバルーンギフト</div>
+            <h3 class="shop-name">Fairy Balloon</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                フェアリーバルーンは店舗を持たず、オーダーメイドで心を込めたバルーンを制作しています。<br>
+                イベント会場や店舗のデコレーションも手がけ、和歌山市内や周辺地域ではイベント出店や委託販売も行っています。<br>
+                イベント当日は、ワークショップを開催し、バルーンのオーダーも受け付けます。<br>
+                お好きなカラーのバルーンを選んで、あなただけのオリジナルスワッグ（壁飾り）を作ります。<br>
+                インテリアのアクセントに大人気。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/fairy_ballooon" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 2. Remind -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Remind.jpg" alt="Remind">
+            </div>
+            <div class="shop-catchphrase">毎日に“ときめき”をくれる、美と癒しのセレクトショップ</div>
+            <h3 class="shop-name">Remind</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                和歌山市友田町にある、「美容・美味・美肌」をテーマにときめくアイテムをセレクトしているお店です。<br>
+                おしゃれな雑貨のほか、はちみつ由来のお菓子、毎日のケアに取り入れたい美容アイテムなどを取り揃えています。<br>
+                今回のイベントでは、大切な人へも、自分へも贈りたくなるときめきギフトをご用意しています。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/remind_zakka" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 3. Mahner -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Mahner.jpg" alt="Mahner">
+            </div>
+            <div class="shop-catchphrase">偶然が生む美しさ。世界にひとつのアート体験</div>
+            <h3 class="shop-name">Mahner</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                アルコールインクアート講師として活動しながら、アートを活かしたハンドメイドアクセサリーも制作しています。<br>
+                イベント出店や委託販売で、唯一無二の作品をお届けしています。<br>
+                当日はワークショップやアクセサリー、雑貨の販売も行います。<br>
+                ポーリングアートという技法でチャームプレートを作ります。<br>
+                バッグや鍵につけるキーホルダーとして、いろんな用途に使っていただけます。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/mahner_inkart" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 4. リミタロット 日月あい -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Limitarot_Hizuki_Ai.jpg" alt="リミタロット 日月あい">
+            </div>
+            <div class="shop-catchphrase">迷ったとき、そっと背中を押してくれる時間</div>
+            <h3 class="shop-name">リミタロット 日月あい</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                過去、現在、未来をつなぐ。<br>
+                今を前向きに生きる鑑定をしています。<br>
+                あなたの心の迷いを解き明かす<br>
+                霊視霊感鑑定　10分3000円<br>
+                タロット占い　10分2000円<br>
+                当日は先着順です。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/limeidongchu" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 5. three-U -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/three-U.jpg" alt="three-U">
+            </div>
+            <div class="shop-catchphrase">“私らしさ”に出会える、心ときめくアクセサリー</div>
+            <h3 class="shop-name">three-U</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                “使いやすいのに、でも独創的なモノ”<br>
+                そんなテーマで、思わずつけたくなるアクセサリーを制作しています。<br>
+                ファッション好きの姉妹が、その瞬間のひらめきを形にするデザインは一点物も多く、幅広いテイストを楽しんでいただけます。<br>
+                ピアスを中心に、ネックレス、ヘアアクセ、バッグチャームなど販売予定です。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/uuu.three_u" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 6. La vita -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/La_vita.jpg" alt="La vita">
+            </div>
+            <div class="shop-catchphrase">素材のやさしさが、心までほどけるお菓子</div>
+            <h3 class="shop-name">La vita</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                こだわりの平飼い卵を中心に、国産・有機素材をできるだけ使って丁寧に手づくりしています。<br>
+                現在は委託販売やイベントを中心に活動し、橋本市で不定期に店舗もオープンしています。<br>
+                当日は、素材の味を生かした優しいお菓子や焼き菓子などをお届けします。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/la_vita_2018_" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 7. おうちごはん服部食堂 -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Hattori_Shokudo.jpg" alt="おうちごはん服部食堂">
+            </div>
+            <div class="shop-catchphrase">ほっとする美味しさ。誰かに食べさせたくなるごはん</div>
+            <h3 class="shop-name">おうちごはん服部食堂</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                和歌山市西高松にあるおうちごはん、服部食堂です。<br>
+                イベントでは、旬の食材たっぷりの彩り弁当と、子どもから大人まで人気のジューシーチキンを販売します。<br>
+                この機会にぜひ味わってみてください。<br>
+                お店では、ランチや夜ごはんも楽しめます。<br>
+                お昼はお弁当販売もしています。機会があれば、ぜひお店にも遊びに来てくださいね。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/__hattorishokudou__" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 8. ドライフラワー雑貨SHINY -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Dryflower_SHINY.jpg" alt="ドライフラワー雑貨SHINY">
+            </div>
+            <div class="shop-catchphrase">飾るだけで、日常がちょっと特別になる</div>
+            <h3 class="shop-name">ドライフラワー雑貨SHINY</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                岩出市にお店を構えるドライフラワーショップ。<br>
+                質の良いドライフラワーを一本から販売し、ワークショップやセミナー、県外イベントへの出店などを通して魅力を伝えています。<br>
+                おしゃれなリースやオーダーメイドのブーケも人気です。<br>
+                イベントにはいろんな種類のドライフラワーやすぐ飾れるスワッグなども販売します。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/shiny3137" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 9. ミンズ -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/mmhs_Mins.jpg" alt="ミンズ">
+            </div>
+            <div class="shop-catchphrase">年齢を超えて、ときめく“ハート”を身につける</div>
+            <h3 class="shop-name">ミンズ</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                いくつになってもハートを身に纏いたい思いから、どんなファッションにも合うようなハートモチーフアクセサリーを制作しています。<br>
+                〜Heart is timeless〜<br>
+                年齢を超えて、ハートを纏う。<br>
+                heart motif accessory shop
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/mmhs___" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 10. LumiereDouce -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/LumiereDouce.jpg" alt="LumiereDouce">
+            </div>
+            <div class="shop-catchphrase">心に灯る、小さな光を持ち帰る</div>
+            <h3 class="shop-name">LumiereDouce</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                「光のかけら」<br>
+                心の中にある小さな光。<br>
+                キャンドルも天然石も、その光をかたちにした作品です。<br>
+                作品を通して、心の中にある光とそっと向き合う時間をお届けできたらと思っています。<br>
+                手にして頂いた方の毎日に、やさしい光が届きますように。<br>
+                イベントではお花を使ったキャンドル作りを体験していただけます。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/otomefujin" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 11. コハク珈琲 -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/Kohaku_Coffee.jpg" alt="コハク珈琲">
+            </div>
+            <div class="shop-catchphrase">一杯のコーヒーが、心ほどける時間をつくる</div>
+            <h3 class="shop-name">コハク珈琲</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                自家焙煎した珈琲豆を使い、一杯一杯ハンドドリップで丁寧に淹れる珈琲屋です。<br>
+                コーヒーの香りとともに、人と人が自然につながり、ほっと心がほどける時間を大切にしています。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/kohaku_coffee_w" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- 12. atelier.b -->
+        <details class="shop-card">
+          <summary class="shop-card-summary">
+            <div class="shop-image-wrapper">
+              <img src="assets/images/atelier_b.jpg" alt="atelier.b">
+            </div>
+            <div class="shop-catchphrase">身体にも、心にもやさしい。罪悪感のないお菓子</div>
+            <h3 class="shop-name">atelier.b</h3>
+            <span class="btn-open">詳しく見る</span>
+          </summary>
+          <div class="shop-card-details">
+            <div class="shop-card-inner">
+              <p class="shop-description">
+                和歌山城近く、パティスリーケイトシィ様跡地でひっそりと営むお店 atelier.b。<br>
+                焼き菓子やスコーン、フォカッチャを中心に、有機素材を使い、動物性食品や白砂糖を使わないプラントベース（Vegan）で焼き上げています。<br>
+                身体にやさしい、罪悪感のないお菓子たちをぜひ手に取ってみてください。
+              </p>
+              <div class="shop-actions">
+                <a href="https://instagram.com/atelier.b_wakayama" target="_blank" rel="noopener noreferrer" class="btn-ig">Instagramを見る</a>
+                <button class="btn-close" onclick="event.preventDefault(); this.closest('details').removeAttribute('open')">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- 6. Venue Section -->
+    <section class="venue bg-white">
+      <div class="venue-image-wrapper">
+        <img src="assets/images/rasyure.jpg" alt="ラシュレディアコート和歌山 会場紹介" class="venue-main-img">
+      </div>
+      <div class="venue-text-body">
+        <h2 class="section-title" style="margin-bottom: 1.5rem;">特別な場所で、特別な出会いを。</h2>
+        <p>上質な邸宅が作り出す、ゆったりとした時間。<br>普段はなかなか訪れる機会のない空間で、<br>心ゆくまでマルシェをお楽しみください。</p>
+      </div>
+    </section>
+
+    <!-- 7. Info Section -->
+    <section id="info" class="info bg-green">
+      <h2 class="section-title">開催日時・場所</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <div class="info-label">日時</div>
+          <div class="info-val">2026年5月31日（日）<br>10:00〜16:00</div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">場所</div>
+          <div class="info-val">ラシュレディアコート和歌山<br><span style="font-size: 0.9rem;">和歌山市湊御殿3丁目2-1（旧玉姫殿）</span></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">駐車場</div>
+          <div class="info-val">あり</div>
+        </div>
+        <div class="info-row" style="margin-top: 2rem;">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.5492160912185!2d135.156543115222!3d34.221764680559795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000b2e88a0b01c3%3A0xbcc0e1ef0db05106!2z44Op44K344Ol44Os44OH44Kj44Ki44Kz44O844OI!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ Section -->
+    <section class="faq bg-white">
+      <h2 class="section-title">よくあるご質問</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">入場料はかかりますか？</div>
+          <div class="faq-a">入場無料です。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">駐車場はありますか？</div>
+          <div class="faq-a">会場に駐車場があります。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">子ども連れでも大丈夫ですか？</div>
+          <div class="faq-a">もちろん大丈夫です。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Closing Section -->
+    <section class="closing bg-green">
+      <h2 class="closing-title">あなたの「好き」に、<br>出会える一日。</h2>
+      <p class="closing-text">少しだけ日常を抜け出して、<br>心がふっとほどける時間を<br>過ごしに来ませんか。<br><br>And Gift VOL.3でお待ちしています。</p>
+      <a href="https://www.instagram.com/lienstyle2025/" target="_blank" rel="noopener noreferrer" class="btn">Instagramを見る</a>
+    </section>
+    
+    <footer>
+      &copy; 2026 Lien style. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+    // 出店者カードの開閉を制御する関数
+    function toggleCard(btn) {
+      const card = btn.closest('.shop-card');
+      card.classList.toggle('is-open');
+    }
+
+    // 汎用的な画像名にリネームしたスクリプト
+    document.addEventListener("DOMContentLoaded", function() {
+      // images フォルダの画像が fv_image.png などに正しくリネームされていればそのまま表示される
+    });
+  </script>
+</body>
+</html>
