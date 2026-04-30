@@ -1,1 +1,480 @@
 
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-text: #333333;
+  --color-bg-base: #FDFBF7; /* アイボリー */
+  --color-bg-white: #FFFFFF;
+  --color-bg-green: #F4FBF0; /* ごく淡い黄緑 */
+  --color-primary: #9CDA8A; /* フライヤーに合わせた明るい黄緑 */
+  --color-primary-hover: #86C473;
+  --font-main: 'Zen Kaku Gothic New', sans-serif;
+  --font-heading: 'Shippori Mincho', serif;
+  --border-radius-lg: 24px;
+  --border-radius-md: 16px;
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: #E8E8E8; /* PC閲覧時の外側背景 */
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 500px; /* スマホファースト縦長 */
+  margin: 0 auto;
+  background-color: var(--color-bg-base);
+  min-height: 100vh;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-primary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Layout */
+section {
+  padding: 5rem 1.5rem;
+}
+
+.bg-white { background-color: var(--color-bg-white); }
+.bg-green { background-color: var(--color-bg-green); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(143, 173, 144, 0.3);
+  width: 100%;
+  max-width: 320px;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(143, 173, 144, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* 1. Hero Section */
+.hero {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: var(--color-bg-base);
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-copy {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.hero-subcopy {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.hero-info {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-info .date {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* 2. Concept Section */
+.concept .concept-text {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.concept .concept-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* 3. Charm Section */
+.charm-image-wrapper {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* 出店者カードに合わせた影 */
+  margin-top: 1.5rem;
+  background: var(--color-bg-white);
+  padding: 0;
+}
+
+.charm-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-lg);
+}
+
+/* 4. Vendors Section (New Accordion Style) */
+.shop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* 余白を大きく広げてカード同士を区別 */
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.shop-card {
+  background: var(--color-bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* 影を濃くしてカードを際立たせる */
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* 通常表示部分 (details の summary) */
+.shop-card-summary {
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  display: block; /* For Safari */
+  cursor: pointer;
+  list-style: none;
+}
+
+.shop-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.shop-image-wrapper {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--color-bg-green);
+}
+
+.shop-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shop-catchphrase {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.shop-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #888;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: var(--font-main);
+  gap: 0.5rem;
+  pointer-events: none; /* summary全体をクリッカブルにするためボタン自体はイベント発火させない */
+}
+
+.btn-open::after {
+  content: '▼';
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.shop-card-summary:hover .btn-open {
+  color: var(--color-primary);
+}
+
+.shop-card[open] .btn-open::after {
+  transform: rotate(180deg);
+}
+
+/* 詳細エリア (開閉部分) */
+.shop-card-details {
+  /* JSなしのネイティブdetailsなので max-heightは不要になります */
+}
+
+.shop-card-inner {
+  padding: 0 1.5rem 2.5rem;
+}
+
+.shop-description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.shop-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* 洗練されたInstagramボタン */
+.btn-ig {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid #ddd;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 320px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-ig:hover {
+  background-color: var(--color-bg-base);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-close {
+  background-color: transparent;
+  color: #888;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-close::before {
+  content: '▲';
+  font-size: 0.7rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-close:hover {
+  color: var(--color-primary);
+}
+
+/* 6. Venue Section */
+.venue-image-wrapper {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.venue-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.venue-text-body {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.venue-text-body p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* 7. Info Section */
+.info-box {
+  background: var(--color-bg-white);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-row {
+  margin-bottom: 1.5rem;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.info-val {
+  font-size: 1.05rem;
+}
+
+/* 8. FAQ Section */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--color-bg-white);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-q {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.faq-q::before {
+  content: 'Q.';
+}
+
+.faq-a {
+  font-size: 0.95rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.faq-a::before {
+  content: 'A.';
+  font-weight: 600;
+  color: #888;
+}
+
+/* 9. Closing Section */
+.closing {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+.closing-title {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.closing-text {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-bg-white);
+  font-size: 0.8rem;
+  color: #888;
+}
