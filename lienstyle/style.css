@@ -1,4 +1,3 @@
-
 /* Reset & Base */
 * {
   margin: 0;
@@ -7,12 +6,12 @@
 }
 
 :root {
-  --color-text: #333333;
-  --color-bg-base: #FDFBF7; /* アイボリー */
+  --color-text: #2C2C2C; /* 少し柔らかい黒 */
+  --color-bg-base: #F9F8F6; /* 上質なグレージュ系オフホワイト */
   --color-bg-white: #FFFFFF;
-  --color-bg-green: #F4FBF0; /* ごく淡い黄緑 */
-  --color-primary: #9CDA8A; /* フライヤーに合わせた明るい黄緑 */
-  --color-primary-hover: #86C473;
+  --color-bg-green: #F2F4F0; /* 淡いセージグリーン */
+  --color-primary: #4A5D4E; /* 深みのあるオリーブグリーン */
+  --color-primary-hover: #3A4B3D;
   --font-main: 'Zen Kaku Gothic New', sans-serif;
   --font-heading: 'Shippori Mincho', serif;
   --border-radius-lg: 24px;
@@ -89,7 +88,7 @@ section {
   text-align: center;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(143, 173, 144, 0.3);
+  box-shadow: 0 4px 15px rgba(74, 93, 78, 0.3);
   width: 100%;
   max-width: 320px;
 }
@@ -97,7 +96,7 @@ section {
 .btn:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(143, 173, 144, 0.4);
+  box-shadow: 0 6px 20px rgba(74, 93, 78, 0.4);
 }
 
 .btn-outline {
