@@ -23,6 +23,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 単語区切りでの改行用クラス（BudouXと併用） */
+.phrase-wrap {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 body {
   font-family: var(--font-main);
   color: var(--color-text);
@@ -30,10 +36,6 @@ body {
   line-height: 1.8;
   letter-spacing: 0.05em;
   -webkit-font-smoothing: antialiased;
-  /* 日本語の単語のまとまりで自然に改行させる */
-  word-break: auto-phrase;
-  /* 最後の行に1文字だけ残る（孤立する）のを防ぐ */
-  text-wrap: pretty;
 }
 
 .app-container {
@@ -68,7 +70,6 @@ h1, h2, h3 {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   color: var(--color-primary);
-  text-wrap: balance; /* タイトルが綺麗なバランスで改行されるようにする */
 }
 
 .text-center {
@@ -149,7 +150,6 @@ section {
   font-size: 1.8rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
-  text-wrap: balance;
 }
 
 .hero-subcopy {
