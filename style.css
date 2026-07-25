@@ -839,6 +839,20 @@ details[open] .faq-icon::after {
     border-left: 3px solid var(--color-accent-text);
 }
 
+/* お客様のメンション画像は文字が切れないよう原寸比率で表示 */
+.case-img-wrap.voice-shot {
+    aspect-ratio: auto;
+    background: var(--color-accent-beige);
+}
+
+.voice-source {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--color-text-sub);
+}
+
 /* Flow Section */
 .flow-steps {
     max-width: 700px;
