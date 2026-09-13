@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5L5YQ92M2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J5L5YQ92M2');
+</script>
 <title>成人式・前撮りのバルーンブーケ|フェアリーバルーン(和歌山)</title>
 <meta name="description" content="振袖を引き立てる大きさで、しぼみにくい、“あの子の色”のバルーンブーケ。前撮りにも当日にも。和歌山のオーダーメイドバルーン専門店。色をえらぶだけ、あとはおまかせ。">
 <meta property="og:title" content="成人式・前撮りのバルーンブーケ|フェアリーバルーン(和歌山)">
@@ -563,9 +571,63 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
   .notes-grid{grid-template-columns:1fr;gap:26px}
   .note-photos--single .frame{flex-basis:55%}
 }
+
+/* ---------- 近道(ジャンプボタン)・固定ナビ 2026-09-13 ---------- */
+section{scroll-margin-top:76px}
+.quicknav{padding:0 0 clamp(32px,5vw,52px)}
+.quicknav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.quicknav-btn{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--serif);font-weight:600;font-size:14.5px;letter-spacing:.06em;color:var(--gold-deep);
+  border:1px solid var(--gold-soft);background:#fff;padding:16px 10px;text-decoration:none;line-height:1.5;
+  transition:border-color .25s ease,background .25s ease,color .25s ease;
+}
+.quicknav-btn:hover{border-color:var(--gold);background:var(--champagne);color:var(--ink)}
+@media (max-width:640px){.quicknav-grid{grid-template-columns:repeat(2,1fr)}}
+
+.fixednav{
+  position:fixed;top:0;left:0;right:0;z-index:60;height:44px;display:flex;align-items:center;
+  background:rgba(251,249,244,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hairline);
+  transform:translateY(-100%);transition:transform .3s ease;
+}
+.fixednav.show{transform:translateY(0)}
+.fixednav-grid{display:flex;gap:4px;width:100%;justify-content:center;padding:0 10px}
+.fixednav a{
+  font-family:var(--gothic);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--ink-2);
+  text-decoration:none;padding:6px 16px;border-radius:2px;white-space:nowrap;
+}
+.fixednav a:hover{color:var(--gold-deep)}
+@media (max-width:640px){.fixednav-grid{gap:0;justify-content:space-between;padding:0 6px}.fixednav a{padding:6px 6px;font-size:11.5px}}
+
+/* ---------- たたむ(details) 2026-09-13 ---------- */
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pill{font-family:var(--serif);font-weight:600;font-size:13.5px;letter-spacing:.06em;padding:7px 16px;border:1px solid var(--gold-soft);border-radius:999px;color:var(--gold-deep);background:#fff}
+details.fold{margin-top:clamp(18px,2.4vw,28px)}
+details.fold summary{
+  cursor:pointer;list-style:none;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:.08em;color:var(--ink);
+  padding:16px clamp(20px,3vw,26px);background:#fff;border:1px solid var(--hairline);
+}
+details.fold summary::-webkit-details-marker{display:none}
+details.fold summary::marker{content:""}
+details.fold summary::after{content:"+";font-family:var(--latin);font-weight:500;font-size:22px;color:var(--gold-deep);flex:none;line-height:1}
+details.fold[open] summary::after{content:"−"}
+.anshin-grid details.fold summary{font-size:17.5px}
+.anshin-grid details.fold dd{padding:18px clamp(20px,3vw,26px) 4px}
 </style>
 </head>
 <body>
+
+<nav class="fixednav" id="fixednav" aria-label="固定ナビ">
+  <div class="fixednav-grid">
+    <a class="js-jump" href="#gallery">制作例</a>
+    <a class="js-jump" href="#menu">お品書き</a>
+    <a class="js-jump" href="#order">注文</a>
+    <a class="js-jump" href="#mother">お母さまへ</a>
+  </div>
+</nav>
 
 <header>
   <div class="wrap bar">
@@ -582,7 +644,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
       <h1 class="hero-title"><span class="nw">一生に一度の</span><span class="nw">晴れ姿に、</span><br><em>“あの子の色”</em>の<span class="nw">ブーケを。</span></h1>
       <p class="hero-sub">振袖を引き立てる大きさで。しぼみにくいバルーンで。<br>前撮りにも、当日にも。色をえらぶだけ、あとはおまかせ。</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener"><span class="line-dot"></span>LINEで相談する</a>
+        <a class="btn btn-primary" href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener" data-ga-place="hero"><span class="line-dot"></span>LINEで相談する</a>
         <a class="btn btn-ghost" href="#menu">メニューと価格</a>
       </div>
       <div class="hero-marks">
@@ -602,13 +664,23 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
   </div>
 </section>
 
+<!-- ===== 近道(ジャンプボタン) ===== -->
+<nav class="quicknav" aria-label="ページ内ジャンプ">
+  <div class="wrap quicknav-grid">
+    <a class="quicknav-btn js-jump" href="#gallery">制作例を見る</a>
+    <a class="quicknav-btn js-jump" href="#menu">お品書き 5,800円〜</a>
+    <a class="quicknav-btn js-jump" href="#order">注文の流れ</a>
+    <a class="quicknav-btn js-jump" href="#mother">お母さまへ</a>
+  </div>
+</nav>
+
 <!-- ===== 共感 ===== -->
 <section class="quote">
   <div class="wrap fade">
     <div class="orn"><i></i></div>
     <blockquote>
-      <p>振袖が決まって、前撮りの日が近づいて。<br>「手に、何か持ちたいね」となったとき、意外と迷うのがブーケです。</p>
-      <p>生花はきれいだけれど、撮影のあとはしおれてしまう。<br>大きさをまちがえると、せっかくの振袖の柄を隠してしまう。<br>そして当日──式典の会場で、朝のままの姿でいてくれる花は、<strong>じつは多くありません。</strong></p>
+      <p>振袖が決まって、前撮りの日が近づいて。「手に、何か持ちたいね」となったとき、意外と迷うのがブーケです。</p>
+      <p>しおれない。柄を隠さない。当日まで同じ姿。その3つを、バルーンで。</p>
     </blockquote>
     <div class="orn bottom"><i></i></div>
   </div>
@@ -623,17 +695,17 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
       <div class="promise fade">
         <div class="no">01</div>
         <h3>主役に合わせて、大きさを選べます</h3>
-        <p>振袖を主役にするなら、柄を隠さない手元サイズ。“あの子”を主役にするなら、抱えるほどのラージサイズや、ふわりと浮かぶバルーン。写真でどちらを立てたいかを伺って、いちばん映える大きさをご提案します。</p>
+        <p>振袖を主役なら手元サイズ、“あの子”を主役ならラージや浮かぶバルーン。写真で立てたい方に合わせてご提案します。</p>
       </div>
       <div class="promise fade">
         <div class="no">02</div>
         <h3>“あの子の色”に合わせます</h3>
-        <p>色と雰囲気だけ教えてください。振袖・袴・スーツのお写真をLINEで送っていただければ、いちばん引き立つ組み合わせを作り手がデザインします。おまかせだから、悩まなくて大丈夫。</p>
+        <p>色と雰囲気だけ教えてください。あとは作り手がデザイン。おまかせだから、悩まなくて大丈夫。</p>
       </div>
       <div class="promise fade">
         <div class="no">03</div>
         <h3>前撮りのあとも、しぼみにくい</h3>
-        <p>ブーケは空気で仕上げるので、ヘリウムのように日ごとにしぼむことがありません。秋の前撮りで持って、年明けの成人式でも同じ姿で持てるようにお作りします。そのあとはお部屋に飾って、晴れの日が長くつづきます。</p>
+        <p>空気で仕上げるので日ごとにしぼまず、秋の前撮りから年明けの成人式まで同じ姿で持てます。</p>
       </div>
     </div>
   </div>
@@ -674,7 +746,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
   <div class="wrap">
     <p class="eyebrow fade">Gallery</p>
     <h2 class="sec-title fade">これまでの制作例から、<span class="nw">「好き」を見つけてください。</span></h2>
-    <p class="lead text fade">ご注文ごとに、ひとつずつお作りしてきたブーケです。気に入った雰囲気があれば、写真の番号(M-12 など)をLINEで送ってください。同じものをもう一度ではなく、その雰囲気を汲んで、あなたの振袖に合わせて新しくお作りします。</p>
+    <p class="lead text fade">ひとつずつお作りしてきた制作例です。気に入った雰囲気があれば、番号(M-12 など)をLINEで。同じものの再現ではなく、その雰囲気を汲んで、あなたの振袖に合わせて新しくお作りします。</p>
     <p class="note text fade">※すべて過去の制作例です。材料の都合で、同じものはお作りできないことがあります。上質花・アルファベットバルーンなどのオプションを含むものもあります。見た目を整えるため背景を加工しています。料金は下の<a href="#menu">お品書き</a>をご覧ください。</p>
 
     <div class="omakase fade">
@@ -828,7 +900,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <div class="menu-head fade">
       <p class="eyebrow">Menu</p>
       <h2 class="sec-title">お品書き</h2>
-      <p class="lead">価格はすべて税込。文字入れ(お名前・日付・メッセージなど、ご希望の文字をカッティングシートで貼ります)は、すべてのブーケに込み。「20」の数字バルーンや浮かぶバルーン(ヘリウム)は、どの大きさにも足せます。迷ったら「写真の主役は振袖? それとも、あの子?」で。それでも迷ったら、丸投げで大丈夫です。</p>
+      <p class="lead">価格はすべて税込。文字入れ(お名前・日付など)は、すべてのブーケに込み。迷ったら、丸投げで大丈夫です。</p>
     </div>
 
     <div class="menu-grid">
@@ -874,56 +946,66 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     </div>
     <p class="menu-note fade">※大きさは目安です。デザインや花材により前後します。</p>
 
-    <div class="options fade">
-      <h3>じぶん仕様にできるオプション</h3>
-      <div class="opt"><span class="label">上質な花(高品質の造花)にグレードアップ(メイン・ブーケ)</span><span class="lead-dots"></span><span class="price">+3,000<small>円</small></span></div>
-      <div class="opt"><span class="label">「20」の数字バルーンを組み込む(文字入れで「20」を貼るだけなら、込み・無料です)</span><span class="lead-dots"></span><span class="price">+600<small>円</small></span></div>
-      <div class="opt"><span class="label">アルファベットバルーン(文字の形のバルーン・6文字まで)</span><span class="lead-dots"></span><span class="price">+1,800<small>円</small></span></div>
-      <div class="opt"><span class="label">7文字目から</span><span class="lead-dots"></span><span class="price">+300<small>円/文字</small></span></div>
-      <h3 style="margin-top:26px">浮かぶバルーンを添える(ヘリウム)</h3>
-      <div class="opt"><span class="label">浮かぶバルーン 1点(大きさ・中身により)。どの大きさのブーケにも</span><span class="lead-dots"></span><span class="price">1,200<small>円〜/点</small></span></div>
-      <div class="opt"><span class="label">もう一度、浮かせる(2回目以降・新しいバルーンで)</span><span class="lead-dots"></span><span class="price" style="font-family:var(--gothic);font-size:15px;font-weight:500">1点1,200円〜(同料金)</span></div>
-      <div class="opt"><span class="label">前撮りと当日の2回分を、まとめてご予約</span><span class="lead-dots"></span><span class="price">1,000<small>円引き</small></span></div>
-      <div class="opt"><span class="label">配送(近畿圏・大きさにより。そのほかの地域はご相談。ラージブーケは配送不可・お渡しのみ)</span><span class="lead-dots"></span><span class="price">1,000〜2,000<small>円</small></span><span class="badge">和歌山イオンでのお渡しは無料</span></div>
-      <div class="example"><span>例: メインブーケ+「20」の数字バルーン =</span><span class="nw"><b>6,400</b>円(税込)</span></div>
-      <div class="example" style="margin-top:6px"><span>例: ラージブーケ+浮かぶバルーン5点 =</span><span class="nw"><b>26,000</b>円〜(税込)</span></div>
-    </div>
-
     <div class="early fade">
       <span class="tagline">早期ご予約</span>
       <p><strong>10月31日までのご予約は、「20」の数字バルーン(+600円)が無料。</strong><br>前撮りシーズンは制作枠に限りがあります。12月お渡し分は、枠が埋まり次第しめ切ります。<!-- 枠の本数を出す場合はここに「◯本まで」(洋美さんと決める) --></p>
     </div>
 
-    <div class="compare fade">
-      <b>ご参考に。</b> 通販のバルーンブーケは、名入れ込みで6,000〜8,000円+送料1,000〜1,600円ほどが相場です(2026年9月・当店調べ)。フェアリーバルーンは、振袖のお写真を見て色を合わせるオーダーメイド。和歌山イオンでのお渡しなら、送料もかかりません。
+    <div class="pills fade">
+      <span class="pill">メイン5,800円〜</span>
+      <span class="pill">色を教えるだけ</span>
+      <span class="pill">撮影日の2週間前まで</span>
     </div>
 
-    <div class="float-sec fade">
-      <h3>「文字入れ」と「アルファベットバルーン」のちがい</h3>
-      <p>どのブーケにも込みの<strong>文字入れ</strong>は、透明のバルーンに、お名前や日付、「Congratulations!」などご希望の文字を、カッティングシートの美しい文字で貼るもの(ご希望なら「20」も)。上品に仕上げたい方には、こちらがおすすめです。<strong>アルファベットバルーン</strong>は、C・O・C・O・N・Aのように文字の形をしたバルーンを足すオプション(6文字まで+1,800円)。こちらも可能ですが、ブーケが大きくなるため、手元サイズでは振袖の柄が隠れることがあります。</p>
-      <div class="float-photos">
-        <figure><img src="img/lettering.jpg" alt="透明のバルーンにカッティングシートで貼った「Congratulations! Cocona」の文字" loading="lazy"><figcaption>文字入れ(込み)<small>カッティングシートで貼る文字</small></figcaption></figure>
-        <!-- 文字の形のバルーンの写真: img/letters.jpg を置くと表示される -->
-        <figure><img src="img/letters_v2.jpg" alt="水色のブーケにNONOの文字の形をしたシルバーのバルーンを加えた制作例" loading="lazy" width="1200" height="1600" onerror="this.closest('figure').hidden=true"><figcaption>アルファベットバルーン(オプション)<small>文字の形のバルーン</small></figcaption></figure>
-      </div>
-    </div>
+    <details class="fold fade">
+      <summary>オプションと浮かぶバルーン(ヘリウム)の詳しい説明</summary>
 
-    <div class="float-sec fade">
-      <h3>浮かぶバルーンを添えると、こうなります</h3>
-      <p>土台のブーケはそのままに、ヘリウムで浮かぶバルーンを何点か添えます。写真に高さが出て、「あの子」がいちばん目立つ仕上がりに。メインブーケなら3点ほど、ラージなら5点ほどがおすすめです。浮かぶ部分はお作りしてから1週間〜10日ほどで少しずつ下がっていくので、撮影日・式典の直前にお渡しします。</p>
-      <div class="float-photos">
-        <!-- 写真ファイルを置くと自動で表示される(無い間は自動で隠れる)。合成イメージの場合は必ず「イメージ」と明記 -->
-        <figure><img src="img/float_main_park.jpg" alt="紫のメインブーケの上に、ヘリウムのバルーンが浮かんでいるイメージ(背景・衣装は加工)" width="1086" height="1448" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>メインブーケ+浮かぶバルーン<small class="cap-note">※背景・衣装を加工したイメージです。</small></figcaption></figure>
-        <figure><img src="img/float_large.jpg" alt="ラージブーケに浮かぶバルーンを5点添えたイメージ" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>ラージブーケ+浮かぶ5点<small>※イメージ</small></figcaption></figure>
+      <div class="options">
+        <h3>じぶん仕様にできるオプション</h3>
+        <div class="opt"><span class="label">上質な花(高品質の造花)にグレードアップ(メイン・ブーケ)</span><span class="lead-dots"></span><span class="price">+3,000<small>円</small></span></div>
+        <div class="opt"><span class="label">「20」の数字バルーンを組み込む(文字入れで「20」を貼るだけなら、込み・無料です)</span><span class="lead-dots"></span><span class="price">+600<small>円</small></span></div>
+        <div class="opt"><span class="label">アルファベットバルーン(文字の形のバルーン・6文字まで)</span><span class="lead-dots"></span><span class="price">+1,800<small>円</small></span></div>
+        <div class="opt"><span class="label">7文字目から</span><span class="lead-dots"></span><span class="price">+300<small>円/文字</small></span></div>
+        <h3 style="margin-top:26px">浮かぶバルーンを添える(ヘリウム)</h3>
+        <div class="opt"><span class="label">浮かぶバルーン 1点(大きさ・中身により)。どの大きさのブーケにも</span><span class="lead-dots"></span><span class="price">1,200<small>円〜/点</small></span></div>
+        <div class="opt"><span class="label">もう一度、浮かせる(2回目以降・新しいバルーンで)</span><span class="lead-dots"></span><span class="price" style="font-family:var(--gothic);font-size:15px;font-weight:500">1点1,200円〜(同料金)</span></div>
+        <div class="opt"><span class="label">前撮りと当日の2回分を、まとめてご予約</span><span class="lead-dots"></span><span class="price">1,000<small>円引き</small></span></div>
+        <div class="opt"><span class="label">配送(近畿圏・大きさにより。そのほかの地域はご相談。ラージブーケは配送不可・お渡しのみ)</span><span class="lead-dots"></span><span class="price">1,000〜2,000<small>円</small></span><span class="badge">和歌山イオンでのお渡しは無料</span></div>
+        <div class="example"><span>例: メインブーケ+「20」の数字バルーン =</span><span class="nw"><b>6,400</b>円(税込)</span></div>
+        <div class="example" style="margin-top:6px"><span>例: ラージブーケ+浮かぶバルーン5点 =</span><span class="nw"><b>26,000</b>円〜(税込)</span></div>
       </div>
-    </div>
+
+      <div class="compare">
+        <b>ご参考に。</b> 通販のバルーンブーケは、名入れ込みで6,000〜8,000円+送料1,000〜1,600円ほどが相場です(2026年9月・当店調べ)。フェアリーバルーンは、振袖のお写真を見て色を合わせるオーダーメイド。和歌山イオンでのお渡しなら、送料もかかりません。
+      </div>
+
+      <div class="float-sec">
+        <h3>「文字入れ」と「アルファベットバルーン」のちがい</h3>
+        <p>どのブーケにも込みの<strong>文字入れ</strong>は、透明のバルーンに、お名前や日付、「Congratulations!」などご希望の文字を、カッティングシートの美しい文字で貼るもの(ご希望なら「20」も)。上品に仕上げたい方には、こちらがおすすめです。<strong>アルファベットバルーン</strong>は、C・O・C・O・N・Aのように文字の形をしたバルーンを足すオプション(6文字まで+1,800円)。こちらも可能ですが、ブーケが大きくなるため、手元サイズでは振袖の柄が隠れることがあります。</p>
+        <div class="float-photos">
+          <figure><img src="img/lettering.jpg" alt="透明のバルーンにカッティングシートで貼った「Congratulations! Cocona」の文字" loading="lazy"><figcaption>文字入れ(込み)<small>カッティングシートで貼る文字</small></figcaption></figure>
+          <!-- 文字の形のバルーンの写真: img/letters.jpg を置くと表示される -->
+          <figure><img src="img/letters_v2.jpg" alt="水色のブーケにNONOの文字の形をしたシルバーのバルーンを加えた制作例" loading="lazy" width="1200" height="1600" onerror="this.closest('figure').hidden=true"><figcaption>アルファベットバルーン(オプション)<small>文字の形のバルーン</small></figcaption></figure>
+        </div>
+      </div>
+
+      <div class="float-sec">
+        <h3>浮かぶバルーンを添えると、こうなります</h3>
+        <p>土台のブーケはそのままに、ヘリウムで浮かぶバルーンを何点か添えます。写真に高さが出て、「あの子」がいちばん目立つ仕上がりに。メインブーケなら3点ほど、ラージなら5点ほどがおすすめです。浮かぶ部分はお作りしてから1週間〜10日ほどで少しずつ下がっていくので、撮影日・式典の直前にお渡しします。</p>
+        <div class="float-photos">
+          <!-- 写真ファイルを置くと自動で表示される(無い間は自動で隠れる)。合成イメージの場合は必ず「イメージ」と明記 -->
+          <figure><img src="img/float_main_park.jpg" alt="紫のメインブーケの上に、ヘリウムのバルーンが浮かんでいるイメージ(背景・衣装は加工)" width="1086" height="1448" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>メインブーケ+浮かぶバルーン<small class="cap-note">※背景・衣装を加工したイメージです。</small></figcaption></figure>
+          <figure><img src="img/float_large.jpg" alt="ラージブーケに浮かぶバルーンを5点添えたイメージ" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>ラージブーケ+浮かぶ5点<small>※イメージ</small></figcaption></figure>
+        </div>
+      </div>
+    </details>
 
     <p class="note fade" style="margin-top:18px;text-align:center">卒業式(袴)のブーケも、同じお品書きで承ります。</p>
   </div>
 </section>
 
 <!-- ===== 注文の流れ ===== -->
-<section>
+<section id="order">
   <div class="wrap">
     <p class="eyebrow fade">How to Order</p>
     <h2 class="sec-title fade">ご注文は、<span class="nw">LINEで3ステップ</span></h2>
@@ -943,14 +1025,17 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
       <h2 class="sec-title">いつまでに<br>頼めばいい?</h2>
       <p class="lead">前撮りは、撮影日の<strong>2週間前まで</strong>のご相談が安心です。お急ぎの方も、まずはご相談ください。成人式当日渡しは、数に限りがあります。</p>
     </div>
-    <div class="timeline fade">
-      <div class="tl now"><h4>9〜10月<span>いま</span></h4><p>前撮りシーズン本番。撮影日の2週間前までにご相談ください(お急ぎはご相談を)。10/31までは早期ご予約の特典も。</p></div>
-      <div class="tl"><h4>11〜12月</h4><p>オーダー受付中。年内のご相談がおすすめです。12月お渡し分は、枠が埋まり次第しめ切ります。</p></div>
-      <div class="tl"><h4>12月下旬〜</h4><p>式典直前。おまかせオーダーは締め切りますが、できる限り対応します。手元にある材料の範囲でご希望にお応えできることもありますが、添えない場合もあります。できれば早めにご相談ください。</p></div>
-      <div class="tl"><h4>1月</h4><p>成人式当日渡し(数に限りがあります)。後撮り向けのご相談も。</p></div>
-      <p class="note" style="margin-top:22px;padding-top:16px;border-top:1px solid var(--hairline)">前撮りがお済みの方も、当日用・後撮り用にどうぞ。式典のあと、2〜3月の後撮りにもお使いいただけます。</p>
-      <div class="tl"><h4>2〜3月</h4><p>卒業式(袴)ブーケ。3月は生花が品薄になりやすい季節。バルーンなら、予約でたしかに。</p></div>
-    </div>
+    <details class="fold fade">
+      <summary>時期ごとの目安(9月〜3月)</summary>
+      <div class="timeline">
+        <div class="tl now"><h4>9〜10月<span>いま</span></h4><p>前撮りシーズン本番。撮影日の2週間前までにご相談ください(お急ぎはご相談を)。10/31までは早期ご予約の特典も。</p></div>
+        <div class="tl"><h4>11〜12月</h4><p>オーダー受付中。年内のご相談がおすすめです。12月お渡し分は、枠が埋まり次第しめ切ります。</p></div>
+        <div class="tl"><h4>12月下旬〜</h4><p>式典直前。おまかせオーダーは締め切りますが、できる限り対応します。手元にある材料の範囲でご希望にお応えできることもありますが、添えない場合もあります。できれば早めにご相談ください。</p></div>
+        <div class="tl"><h4>1月</h4><p>成人式当日渡し(数に限りがあります)。後撮り向けのご相談も。</p></div>
+        <p class="note" style="margin-top:22px;padding-top:16px;border-top:1px solid var(--hairline)">前撮りがお済みの方も、当日用・後撮り用にどうぞ。式典のあと、2〜3月の後撮りにもお使いいただけます。</p>
+        <div class="tl"><h4>2〜3月</h4><p>卒業式(袴)ブーケ。3月は生花が品薄になりやすい季節。バルーンなら、予約でたしかに。</p></div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -975,46 +1060,64 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
 </section>
 
 <!-- ===== 安心(母向け) ===== -->
-<section>
+<section id="mother">
   <div class="wrap">
     <p class="eyebrow fade">For Mother</p>
     <h2 class="sec-title fade">お母さまへ。<span class="nw">安心してお任せください</span></h2>
     <dl class="anshin-grid fade">
       <div>
-        <dt>お渡し・お届け</dt>
-        <dd>お渡しは和歌山イオンにて無料(日時はLINEでご相談ください)。配送は近畿圏1,000〜2,000円(大きさによります)。そのほかの地域はご相談ください。ラージブーケは大きな商品のため配送ができず、お渡しのみです。お届けをご希望の場合は、ご相談ください。※北海道・沖縄・離島は航空便での配送になるため、バルーンをお送りできません。</dd>
+        <details class="fold">
+          <summary>お渡し・お届け</summary>
+          <dd>お渡しは和歌山イオンにて無料(日時はLINEでご相談ください)。配送は近畿圏1,000〜2,000円(大きさによります)。そのほかの地域はご相談ください。ラージブーケは大きな商品のため配送ができず、お渡しのみです。お届けをご希望の場合は、ご相談ください。※北海道・沖縄・離島は航空便での配送になるため、バルーンをお送りできません。</dd>
+        </details>
       </div>
       <div>
-        <dt>お支払い</dt>
-        <dd>現金・PayPay・銀行振込・クレジットカード(Visa/Mastercard/JCB/American Express/Diners Club/Discover)がご利用いただけます。</dd>
+        <details class="fold">
+          <summary>お支払い</summary>
+          <dd>現金・PayPay・銀行振込・クレジットカード(Visa/Mastercard/JCB/American Express/Diners Club/Discover)がご利用いただけます。</dd>
+        </details>
       </div>
       <div>
-        <dt>浮かぶバルーン(ヘリウム)について</dt>
-        <dd>土台のブーケは空気で仕上げるので、前撮りから成人式まで同じ姿で持てるようにお作りします。浮かぶ部分(ヘリウム)だけは、お作りしてから1週間〜10日ほどをめどに少しずつ下がっていきます。そのため、撮影日・式典の直前にお渡しします。前撮りと当日の両方で使うときは「もう一度、浮かせる」(同料金)で新しいバルーンに。成人式当日の浮かせ直しは数に限りがあります。<br><br><strong>お渡し後にお気をつけいただきたいこと:</strong> ヘリウムのバルーンは寒さで縮み、暑さで膨らみます(1月の屋外・秋の車内など)。車で運ぶときは、冷暖房の風を直接当てないでください。屋外の撮影は風の弱い場所で。写真館や式場によってはヘリウムバルーンを持ち込めないことがあるので、事前に会場へご確認ください。</dd>
+        <details class="fold">
+          <summary>浮かぶバルーン(ヘリウム)について</summary>
+          <dd>土台のブーケは空気で仕上げるので、前撮りから成人式まで同じ姿で持てるようにお作りします。浮かぶ部分(ヘリウム)だけは、お作りしてから1週間〜10日ほどをめどに少しずつ下がっていきます。そのため、撮影日・式典の直前にお渡しします。前撮りと当日の両方で使うときは「もう一度、浮かせる」(同料金)で新しいバルーンに。成人式当日の浮かせ直しは数に限りがあります。<br><br><strong>お渡し後にお気をつけいただきたいこと:</strong> ヘリウムのバルーンは寒さで縮み、暑さで膨らみます(1月の屋外・秋の車内など)。車で運ぶときは、冷暖房の風を直接当てないでください。屋外の撮影は風の弱い場所で。写真館や式場によってはヘリウムバルーンを持ち込めないことがあるので、事前に会場へご確認ください。</dd>
+        </details>
       </div>
       <div>
-        <dt>前撮りから当日まで、きれいに保つには</dt>
-        <dd>直射日光と、暖房・エアコンの風が当たらない室内に、立てた状態で置いてください。お渡しした袋やラッピングに入れたままにしておくと、ほこりも防げます。これで秋の前撮りから年明けの成人式まで、きれいな姿を保ちやすくなります。</dd>
+        <details class="fold">
+          <summary>前撮りから当日まで、きれいに保つには</summary>
+          <dd>直射日光と、暖房・エアコンの風が当たらない室内に、立てた状態で置いてください。お渡しした袋やラッピングに入れたままにしておくと、ほこりも防げます。これで秋の前撮りから年明けの成人式まで、きれいな姿を保ちやすくなります。</dd>
+        </details>
       </div>
       <div>
-        <dt>お渡し後のお取り扱いと保証について</dt>
-        <dd>ヘリウムやゴムではなく空気で仕上げるため、しぼみにくく丈夫です。ただしバルーンの繊細さは変わらず、物にぶつかる・とがったものに触れる・高温になるなどで、穴が開くことがあります。お渡しのときに仕上がりをご確認いただき、その時点でお約束は完了となります。お渡し後の破損は保証いたしかねますが、お困りのときはまずご相談ください(内容により、個別にご対応します)。</dd>
+        <details class="fold">
+          <summary>お渡し後のお取り扱いと保証について</summary>
+          <dd>ヘリウムやゴムではなく空気で仕上げるため、しぼみにくく丈夫です。ただしバルーンの繊細さは変わらず、物にぶつかる・とがったものに触れる・高温になるなどで、穴が開くことがあります。お渡しのときに仕上がりをご確認いただき、その時点でお約束は完了となります。お渡し後の破損は保証いたしかねますが、お困りのときはまずご相談ください(内容により、個別にご対応します)。</dd>
+        </details>
       </div>
       <div>
-        <dt>デザインのご指定について</dt>
-        <dd>おまかせが基本です。参考にしたい写真は、ギャラリーの番号で2点までを目安にお送りください。合わせ方とデザインは作り手にお任せいただきます。細かなご指定が多い場合はご相談ください(内容により、お受けできないことがあります)。</dd>
+        <details class="fold">
+          <summary>デザインのご指定について</summary>
+          <dd>おまかせが基本です。参考にしたい写真は、ギャラリーの番号で2点までを目安にお送りください。合わせ方とデザインは作り手にお任せいただきます。細かなご指定が多い場合はご相談ください(内容により、お受けできないことがあります)。</dd>
+        </details>
       </div>
       <div>
-        <dt>キャンセル・お直し</dt>
-        <dd>ひとつずつお作りするオーダー品のため、制作を始めたあとのキャンセルはお受けできません。当店の不備によるものは、無償でお直しします。おまかせでお作りしたあとのご希望の変更は、内容により有償となります。お渡し後の破損については上の「お取り扱いと保証」をご覧ください。</dd>
+        <details class="fold">
+          <summary>キャンセル・お直し</summary>
+          <dd>ひとつずつお作りするオーダー品のため、制作を始めたあとのキャンセルはお受けできません。当店の不備によるものは、無償でお直しします。おまかせでお作りしたあとのご希望の変更は、内容により有償となります。お渡し後の破損については上の「お取り扱いと保証」をご覧ください。</dd>
+        </details>
       </div>
       <div>
-        <dt>仕上がりの確認</dt>
-        <dd>完成したブーケの写真をLINEでお送りしてから、お渡しします。気になる点があれば、お渡し前にお伝えください。小さなお直しは1回まで無料です。</dd>
+        <details class="fold">
+          <summary>仕上がりの確認</summary>
+          <dd>完成したブーケの写真をLINEでお送りしてから、お渡しします。気になる点があれば、お渡し前にお伝えください。小さなお直しは1回まで無料です。</dd>
+        </details>
       </div>
       <div>
-        <dt>お客さまの声</dt>
-        <dd><a href="https://www.instagram.com/fairy_ballooon/" target="_blank" rel="noopener">Instagramの「お客様の声」</a>でご覧いただけます。成人式・卒業式の作品もハイライトにまとめています。</dd>
+        <details class="fold">
+          <summary>お客さまの声</summary>
+          <dd><a href="https://www.instagram.com/fairy_ballooon/" target="_blank" rel="noopener">Instagramの「お客様の声」</a>でご覧いただけます。成人式・卒業式の作品もハイライトにまとめています。</dd>
+        </details>
       </div>
     </dl>
   </div>
@@ -1026,7 +1129,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <img class="logo" src="img/logo.jpg" alt="Fairy Balloon">
     <h2 class="sec-title">まずは、色を教えるだけ。</h2>
     <p>「くすみ系で、大人っぽい感じ」「黒でかっこよく」「おまかせで」──その一言からはじまります。<br>ご相談・お見積りは無料です。</p>
-    <a class="btn btn-primary" href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener"><span class="line-dot"></span>LINEで相談する</a>
+    <a class="btn btn-primary" href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener" data-ga-place="cta"><span class="line-dot"></span>LINEで相談する</a>
     <p class="btn-note">お返事は1〜2日以内を目安にお送りします</p>
   </div>
 </section>
@@ -1037,15 +1140,15 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <p>FAIRY BALLOON|和歌山のオーダーメイドバルーン専門店</p>
     <nav style="margin-top:10px">
       <a href="https://www.instagram.com/fairy_ballooon/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener">公式LINE</a>
+      <a href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener" data-ga-place="footer">公式LINE</a>
       <a href="https://fairyballoon.com/" >ホーム</a>
-      <!-- 特商法ページを公開したら有効化: <a href="https://fairyballoon.com/tokusho.html">特定商取引法に基づく表記</a> -->
+      <a href="https://fairyballoon.com/tokusho.html">特定商取引法に基づく表記</a>
     </nav>
   </div>
 </footer>
 
 <div class="sticky">
-  <a class="btn btn-primary" href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener"><span class="line-dot"></span>LINEで相談する(無料)</a>
+  <a class="btn btn-primary" href="https://lin.ee/6JsyB5c" target="_blank" rel="noopener" data-ga-place="sticky"><span class="line-dot"></span>LINEで相談する(無料)</a>
 </div>
 
 <script>
@@ -1055,6 +1158,39 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 els.forEach(el=>io.observe(el));
 /* 保険: 演出が発火しない環境でも2秒後に全部表示する */
 setTimeout(()=>els.forEach(el=>el.classList.add('in')),2000);
+</script>
+
+<script>
+/* 固定ナビ: ヒーローを通り過ぎたら表示(2026-09-13) */
+(function(){
+  const hero=document.querySelector('.hero');
+  const nav=document.getElementById('fixednav');
+  if(!hero||!nav) return;
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{ nav.classList.toggle('show', !entry.isIntersecting); });
+  },{threshold:0});
+  io.observe(hero);
+})();
+</script>
+
+<script>
+/* GA4 追加イベント(2026-09-13): faq_open / line_click / nav_jump */
+(function(){
+  if(typeof gtag!=='function') return;
+  document.addEventListener('toggle', function(e){
+    const d=e.target;
+    if(d.tagName==='DETAILS' && d.open){
+      const s=d.querySelector('summary');
+      gtag('event','faq_open',{label:(s?s.textContent.trim():'')});
+    }
+  }, true);
+  document.addEventListener('click', function(e){
+    const jump=e.target.closest('.js-jump');
+    if(jump){ gtag('event','nav_jump',{target:jump.getAttribute('href')}); }
+    const line=e.target.closest('a[href*="lin.ee"]');
+    if(line){ gtag('event','line_click',{place:line.dataset.gaPlace||'other'}); }
+  });
+})();
 </script>
 
 <script>
