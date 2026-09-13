@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fairyballoon.com/sitemap.xml
