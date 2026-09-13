@@ -418,6 +418,7 @@ footer nav a:hover{color:var(--gold-deep)}
 .float-photos .cap-note{font-size:14.5px}
 .float-photos:has(>figure[hidden]){grid-template-columns:1fr;justify-items:center}
 .float-photos figure{max-width:460px;margin:0 auto}
+.float-photos img[src$="letters_v2.jpg"]{aspect-ratio:4/3;object-fit:cover;object-position:center 62%}
 .atelier .sub-photo{right:-8px;bottom:-22px;object-position:50% 50%}
 /* 決定済みの本文17px・注記13.5px以上を個別指定にも適用 */
 .lead,.hero-sub,.promise p,.menu-inc,.menu-desc,.opt,.example,.compare,
@@ -679,7 +680,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <div class="omakase fade">
       <h3>教えていただくのは、3つだけ。</h3>
       <ol>
-        <li><b>振袖・袴・スーツのお写真</b><span>柄と色を見て、合わせます</span></li>
+        <li><b>振袖・袴・スーツのお写真(あれば)</b><span>柄と色を見て、合わせます。なくても大丈夫です</span></li>
         <li><b>ご本人の雰囲気</b><span>かわいい・大人っぽい・かっこよく</span></li>
         <li><b>大きさと、入れたい文字</b><span>お品書きの3つから。文字はお名前や日付など</span></li>
       </ol>
@@ -689,7 +690,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <div class="gal-tabs fade" role="tablist" aria-label="制作例のカテゴリー">
       <button type="button" class="gal-tab" role="tab" id="tab-main" aria-controls="gal-main" aria-selected="true" tabindex="0">メインブーケ<small>Main Bouquet · 38</small></button>
       <button type="button" class="gal-tab" role="tab" id="tab-bouquet" aria-controls="gal-bouquet" aria-selected="false" tabindex="-1">ブーケ<small>Bouquet · 11</small></button>
-      <button type="button" class="gal-tab" role="tab" id="tab-large" aria-controls="gal-large" aria-selected="false" tabindex="-1">ラージブーケ<small>Large Bouquet · 4</small></button>
+      <button type="button" class="gal-tab" role="tab" id="tab-large" aria-controls="gal-large" aria-selected="false" tabindex="-1">ラージブーケ<small>Large Bouquet · 2</small></button>
     </div>
     <div class="gal-panel" role="tabpanel" id="gal-main" aria-labelledby="tab-main">
       <div class="gal-grid">
@@ -754,8 +755,6 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
       <div class="gal-grid">
         <figure class="gal-item" data-no="L-01" data-cat="ラージブーケ"><button type="button" class="gal-open" data-full="img/gallery/large/large_001_v1.jpg" data-fw="1086" data-fh="1448" aria-label="L-01 濃いピンクにアルファベットバルーンとハート形バルーンのラージブーケを拡大して見る"><img src="img/gallery/thumbs/large_001_v1.jpg" alt="濃いピンクにアルファベットバルーンとハート形バルーンのラージブーケ" loading="lazy" decoding="async" width="540" height="720"></button><span class="gal-no" aria-hidden="true">L-01</span></figure>
         <figure class="gal-item" data-no="L-02" data-cat="ラージブーケ"><button type="button" class="gal-open" data-full="img/gallery/large/large_002_v1.jpg" data-fw="1086" data-fh="1448" aria-label="L-02 紫×シルバーにアルファベットバルーンとハート形バルーンのラージブーケを拡大して見る"><img src="img/gallery/thumbs/large_002_v1.jpg" alt="紫×シルバーにアルファベットバルーンとハート形バルーンのラージブーケ" loading="lazy" decoding="async" width="540" height="720"></button><span class="gal-no" aria-hidden="true">L-02</span></figure>
-        <figure class="gal-item" data-no="L-03" data-cat="ラージブーケ" data-note="※衣装と背景はイメージ加工です(顔はぼかしています)"><button type="button" class="gal-open" data-full="img/gallery/large/large_003_v1.jpg" data-fw="1085" data-fh="1450" aria-label="L-03 振袖とスーツ姿のふたりがラージブーケを持つイメージ(衣装・背景は加工、顔はぼかし)を拡大して見る"><img src="img/gallery/thumbs/large_003_v1.jpg" alt="振袖とスーツ姿のふたりがラージブーケを持つイメージ(衣装・背景は加工、顔はぼかし)" loading="lazy" decoding="async" width="538" height="720"></button><span class="gal-no" aria-hidden="true">L-03</span></figure>
-        <figure class="gal-item" data-no="L-04" data-cat="ラージブーケ"><button type="button" class="gal-open" data-full="img/gallery/large/large_004_v1.jpg" data-fw="1086" data-fh="1448" aria-label="L-04 紫×シルバーにアルファベットバルーンとハート形バルーンのラージブーケ(別の角度)を拡大して見る"><img src="img/gallery/thumbs/large_004_v1.jpg" alt="紫×シルバーにアルファベットバルーンとハート形バルーンのラージブーケ(別の角度)" loading="lazy" decoding="async" width="540" height="720"></button><span class="gal-no" aria-hidden="true">L-04</span></figure>
       </div>
       <div class="gal-foot"><span class="gal-count"></span><button type="button" class="btn btn-ghost gal-more" hidden>もっと見る</button></div>
     </div>
@@ -773,13 +772,13 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
       <article class="note-card fade">
         <div class="note-photos note-photos--trio">
           <div class="frame frame-sm"><img src="img/gallery/thumbs/large_001_v1.jpg" alt="濃いピンクのラージブーケ(AGEHA)" loading="lazy" decoding="async"><span class="cap">L-01</span></div>
-          <div class="frame frame-lg"><img src="img/gallery/thumbs/large_003_v1.jpg" alt="振袖とスーツ姿のふたりがラージブーケを持つイメージ(衣装・背景は加工)" loading="lazy" decoding="async"><span class="cap">L-03</span></div>
+          <div class="frame frame-lg"><img src="img/gallery/thumbs/large_003_v1.jpg" alt="振袖とスーツ姿のふたりがラージブーケを持つイメージ(衣装・背景は加工)" loading="lazy" decoding="async"></div>
           <div class="frame frame-sm"><img src="img/gallery/thumbs/large_002_v1.jpg" alt="紫のラージブーケ(KIZUNA)" loading="lazy" decoding="async"><span class="cap">L-02</span></div>
         </div>
         <h3>ふたりで持ちたい、から</h3>
         <p>おふたりで持ちたいので、とにかく大きく。色はおまかせ。ご依頼は、それだけでした。並べたときにお揃いに見えるよう、お名前の向きとハートの位置をそろえ、お花は同じ種類の色違いに。ぜんぶ同じにはせず、少しだけ違いを残しています。ラージブーケを初めてお作りした一組です。</p>
         <p class="note-echo">今なら、もっと大きくも作れそうです。</p>
-        <small class="note-img-note">※L-03の衣装と背景はイメージ加工です。</small>
+        <small class="note-img-note">※ふたりの写真の衣装と背景はイメージ加工です。</small>
       </article>
 
       <article class="note-card fade">
@@ -843,7 +842,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
           <li>花は上質な花(高品質の造花)</li>
           <li>文字入れ(お名前・日付・メッセージなど、ご希望の文字を貼る)込み</li>
           <li>ご相談しながらフルオーダーで制作。撮影日の3週間前までに</li>
-          <li>大きさのため配送はできません。和歌山イオンでのお渡し(無料)。お届けをご希望の場合はご相談ください</li>
+          <li>大きな商品のため、配送はできません。和歌山イオンでのお渡し(無料)。お届けをご希望の場合はご相談ください</li>
         </ul>
         <p class="menu-desc">写真に、圧倒的な存在感。浮かぶバルーンを添えると、さらに高さが出ます。数に限りがあります。※写真の衣装と背景はイメージ加工です。</p>
       </div>
@@ -878,14 +877,14 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <div class="options fade">
       <h3>じぶん仕様にできるオプション</h3>
       <div class="opt"><span class="label">上質な花(高品質の造花)にグレードアップ(メイン・ブーケ)</span><span class="lead-dots"></span><span class="price">+3,000<small>円</small></span></div>
-      <div class="opt"><span class="label">「20」の数字バルーンを組み込み(文字入れで「20」を貼ることもできます)</span><span class="lead-dots"></span><span class="price">+600<small>円</small></span></div>
-      <div class="opt"><span class="label">アルファベットバルーン(文字の形のバルーン・6文字まで)※「20」の数字バルーンとは、基本どちらか一方</span><span class="lead-dots"></span><span class="price">+1,800<small>円</small></span></div>
+      <div class="opt"><span class="label">「20」の数字バルーンを組み込む(文字入れで「20」を貼るだけなら、込み・無料です)</span><span class="lead-dots"></span><span class="price">+600<small>円</small></span></div>
+      <div class="opt"><span class="label">アルファベットバルーン(文字の形のバルーン・6文字まで)</span><span class="lead-dots"></span><span class="price">+1,800<small>円</small></span></div>
       <div class="opt"><span class="label">7文字目から</span><span class="lead-dots"></span><span class="price">+300<small>円/文字</small></span></div>
       <h3 style="margin-top:26px">浮かぶバルーンを添える(ヘリウム)</h3>
       <div class="opt"><span class="label">浮かぶバルーン 1点(大きさ・中身により)。どの大きさのブーケにも</span><span class="lead-dots"></span><span class="price">1,200<small>円〜/点</small></span></div>
       <div class="opt"><span class="label">もう一度、浮かせる(2回目以降・新しいバルーンで)</span><span class="lead-dots"></span><span class="price" style="font-family:var(--gothic);font-size:15px;font-weight:500">1点1,200円〜(同料金)</span></div>
       <div class="opt"><span class="label">前撮りと当日の2回分を、まとめてご予約</span><span class="lead-dots"></span><span class="price">1,000<small>円引き</small></span></div>
-      <div class="opt"><span class="label">配送(関西圏・大きさにより。ラージブーケは配送不可・お渡しのみ)</span><span class="lead-dots"></span><span class="price">1,000〜2,000<small>円</small></span><span class="badge">和歌山イオンでのお渡しは無料</span></div>
+      <div class="opt"><span class="label">配送(近畿圏・大きさにより。そのほかの地域はご相談。ラージブーケは配送不可・お渡しのみ)</span><span class="lead-dots"></span><span class="price">1,000〜2,000<small>円</small></span><span class="badge">和歌山イオンでのお渡しは無料</span></div>
       <div class="example"><span>例: メインブーケ+「20」の数字バルーン =</span><span class="nw"><b>6,400</b>円(税込)</span></div>
       <div class="example" style="margin-top:6px"><span>例: ラージブーケ+浮かぶバルーン5点 =</span><span class="nw"><b>26,000</b>円〜(税込)</span></div>
     </div>
@@ -901,7 +900,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
 
     <div class="float-sec fade">
       <h3>「文字入れ」と「アルファベットバルーン」のちがい</h3>
-      <p>どのブーケにも込みの<strong>文字入れ</strong>は、透明のバルーンに、お名前や日付、「Congratulations!」などご希望の文字を、カッティングシートの美しい文字で貼るもの(ご希望なら「20」も)。上品に仕上げたい方には、こちらがおすすめです。<strong>アルファベットバルーン</strong>は、C・O・C・O・N・Aのように文字の形をしたバルーンを足すオプション(6文字まで+1,800円)。こちらも可能ですが、ブーケが大きくなるため、手元サイズでは振袖の柄が隠れることがあります。「20」の数字バルーンとの組み合わせは、形のバランスが崩れやすいため、基本はどちらか一方をおすすめしています。どうしても両方、という場合はご相談ください。作り手が配置を工夫して、できる範囲でお応えします。</p>
+      <p>どのブーケにも込みの<strong>文字入れ</strong>は、透明のバルーンに、お名前や日付、「Congratulations!」などご希望の文字を、カッティングシートの美しい文字で貼るもの(ご希望なら「20」も)。上品に仕上げたい方には、こちらがおすすめです。<strong>アルファベットバルーン</strong>は、C・O・C・O・N・Aのように文字の形をしたバルーンを足すオプション(6文字まで+1,800円)。こちらも可能ですが、ブーケが大きくなるため、手元サイズでは振袖の柄が隠れることがあります。</p>
       <div class="float-photos">
         <figure><img src="img/lettering.jpg" alt="透明のバルーンにカッティングシートで貼った「Congratulations! Cocona」の文字" loading="lazy"><figcaption>文字入れ(込み)<small>カッティングシートで貼る文字</small></figcaption></figure>
         <!-- 文字の形のバルーンの写真: img/letters.jpg を置くと表示される -->
@@ -911,7 +910,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
 
     <div class="float-sec fade">
       <h3>浮かぶバルーンを添えると、こうなります</h3>
-      <p>土台のブーケはそのままに、ヘリウムで浮かぶバルーンを何点か添えます。写真に高さが出て、「あの子」がいちばん目立つ仕上がりに。メインブーケなら3点ほど、ラージなら5点ほどがおすすめです。浮かぶ部分は1週間ほどで少しずつ下がっていくので、撮影日・式典の直前にお渡しします。</p>
+      <p>土台のブーケはそのままに、ヘリウムで浮かぶバルーンを何点か添えます。写真に高さが出て、「あの子」がいちばん目立つ仕上がりに。メインブーケなら3点ほど、ラージなら5点ほどがおすすめです。浮かぶ部分はお作りしてから1週間〜10日ほどで少しずつ下がっていくので、撮影日・式典の直前にお渡しします。</p>
       <div class="float-photos">
         <!-- 写真ファイルを置くと自動で表示される(無い間は自動で隠れる)。合成イメージの場合は必ず「イメージ」と明記 -->
         <figure><img src="img/float_main_park.jpg" alt="紫のメインブーケの上に、ヘリウムのバルーンが浮かんでいるイメージ(背景・衣装は加工)" width="1086" height="1448" loading="lazy" decoding="async" onerror="this.closest('figure').hidden=true"><figcaption>メインブーケ+浮かぶバルーン<small class="cap-note">※背景・衣装を加工したイメージです。</small></figcaption></figure>
@@ -929,9 +928,9 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <p class="eyebrow fade">How to Order</p>
     <h2 class="sec-title fade">ご注文は、<span class="nw">LINEで3ステップ</span></h2>
     <div class="steps">
-      <div class="step fade"><div class="n">1</div><h3>色と雰囲気を教える</h3><p>「くすみで大人っぽく」「白だけで」など、言葉でも写真でも。振袖・袴・スーツのお写真があれば、もっと合わせられます。</p></div>
+      <div class="step fade"><div class="n">1</div><h3>色と雰囲気を教える</h3><p>「くすみで大人っぽく」「白だけで」など、言葉でも写真でも。振袖・袴・スーツのお写真があれば、もっと合わせられます(なくても大丈夫です)。</p></div>
       <div class="step fade"><div class="n">2</div><h3>おまかせで制作</h3><p>お伺いした内容から作り手がデザイン。世界にひとつのブーケをおつくりします。完成写真をLINEでお送りします。</p></div>
-      <div class="step fade"><div class="n">3</div><h3>受け取る</h3><p>和歌山イオンでのお渡しは無料。配送(1,000〜2,000円)も承ります。ご相談のうえ決めた日に、お渡しします。</p></div>
+      <div class="step fade"><div class="n">3</div><h3>受け取る</h3><p>和歌山イオンでのお渡しは無料。配送(近畿圏1,000〜2,000円・そのほかの地域はご相談)も承ります。ご相談のうえ決めた日に、お渡しします。</p></div>
     </div>
   </div>
 </section>
@@ -983,7 +982,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
     <dl class="anshin-grid fade">
       <div>
         <dt>お渡し・お届け</dt>
-        <dd>お渡しは和歌山イオンにて無料(日時はLINEでご相談ください)。配送は関西圏1,000〜2,000円(大きさによります)。ラージブーケは大きさのため配送ができず、お渡しのみです。お届けをご希望の場合は、ご相談ください。※北海道・沖縄・離島は航空便での配送になるため、バルーンをお送りできません。</dd>
+        <dd>お渡しは和歌山イオンにて無料(日時はLINEでご相談ください)。配送は近畿圏1,000〜2,000円(大きさによります)。そのほかの地域はご相談ください。ラージブーケは大きな商品のため配送ができず、お渡しのみです。お届けをご希望の場合は、ご相談ください。※北海道・沖縄・離島は航空便での配送になるため、バルーンをお送りできません。</dd>
       </div>
       <div>
         <dt>お支払い</dt>
@@ -991,7 +990,7 @@ header .tag span,.hero-badge small,.sign small,.tl h4 span{font-size:13.5px}
       </div>
       <div>
         <dt>浮かぶバルーン(ヘリウム)について</dt>
-        <dd>土台のブーケは空気で仕上げるので、前撮りから成人式まで同じ姿で持てるようにお作りします。浮かぶ部分(ヘリウム)だけは、1週間ほどをめどに少しずつ下がっていきます。そのため、撮影日・式典の直前にお渡しします。前撮りと当日の両方で使うときは「もう一度、浮かせる」(同料金)で新しいバルーンに。成人式当日の浮かせ直しは数に限りがあります。<br><br><strong>お渡し後にお気をつけいただきたいこと:</strong> ヘリウムのバルーンは寒さで縮み、暑さで膨らみます(1月の屋外・秋の車内など)。車で運ぶときは冷暖房の風を直接当てず、なるべく短時間で。屋外の撮影は風の弱い場所で。写真館や式場によってはヘリウムバルーンを持ち込めないことがあるので、事前に会場へご確認ください。</dd>
+        <dd>土台のブーケは空気で仕上げるので、前撮りから成人式まで同じ姿で持てるようにお作りします。浮かぶ部分(ヘリウム)だけは、お作りしてから1週間〜10日ほどをめどに少しずつ下がっていきます。そのため、撮影日・式典の直前にお渡しします。前撮りと当日の両方で使うときは「もう一度、浮かせる」(同料金)で新しいバルーンに。成人式当日の浮かせ直しは数に限りがあります。<br><br><strong>お渡し後にお気をつけいただきたいこと:</strong> ヘリウムのバルーンは寒さで縮み、暑さで膨らみます(1月の屋外・秋の車内など)。車で運ぶときは、冷暖房の風を直接当てないでください。屋外の撮影は風の弱い場所で。写真館や式場によってはヘリウムバルーンを持ち込めないことがあるので、事前に会場へご確認ください。</dd>
       </div>
       <div>
         <dt>前撮りから当日まで、きれいに保つには</dt>
