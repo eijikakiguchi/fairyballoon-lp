@@ -721,6 +721,9 @@ header .tag { font-family: var(--serif); font-style: normal; letter-spacing: .12
   .hero-marks div b { display: inline; flex: none; width: 7.6em; }
 }
 .works figcaption i { font-family: var(--serif); font-style: normal; font-weight: 600; letter-spacing: .08em; }
+.hero-photo-box { position: relative; }
+.hero-area { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 16px; font-family: var(--serif); font-weight: 600; font-size: 14.5px; letter-spacing: .06em; white-space: nowrap; color: var(--gold-deep); text-align: center; }
+.hero-area::before, .hero-area::after { content: ""; flex: 0 0 18px; height: 1px; background: var(--gold); }
 .omakase-after { max-width: 720px; margin-top: 14px; font-size: 17px; line-height: 1.9; color: var(--ink); }
 </style>
 </head>
@@ -759,14 +762,17 @@ header .tag { font-family: var(--serif); font-style: normal; letter-spacing: .12
         <div><b>オーダーメイド</b><span><span class="nw">振袖・スーツに</span><span class="nw">合わせて設計</span></span></div>
         <div><b>お渡し無料</b><span><span class="nw">和歌山イオン・</span><span class="nw">配送は有料</span></span></div>
       </div>
-      <p class="hero-local"><span class="nw">和歌山市の小さなアトリエで、</span><span class="nw">ひとつずつ手づくり。</span><br><span class="nw">和歌山市・岩出市・海南市の</span><span class="nw">みなさまへ。</span></p>
+      <p class="hero-local"><span class="nw">和歌山市の小さなアトリエで、</span><span class="nw">ひとつずつ手づくり。</span></p>
     </div>
     <div class="hero-photo fade">
+      <p class="hero-area"><span>和歌山市・海南市・岩出市のみなさまへ</span></p>
+      <div class="hero-photo-box">
       <div class="frame">
         <!-- 実物写真: つくり手の娘 Coconaさん(2026年1月成人式・掲載了解済み 2026-09-12)。約束01で「わが家の娘」と紹介(2026-09-25) -->
         <img src="img/hero_bouquet.jpg" alt="振袖姿で「20」と名前入りのバルーンブーケを手にした、つくり手の娘" style="object-position:50% 30%" fetchpriority="high">
       </div>
       <div class="hero-badge"><span>前撮り<br>当日<br>後撮り</span></div>
+      </div>
     </div>
   </div>
 </section>
