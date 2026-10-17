@@ -295,6 +295,8 @@ header .tag span{display:block;font-family:var(--gothic);font-style:normal;font-
 @media (max-width:640px){.opt{flex-wrap:wrap;gap:6px 10px}.opt .label{flex:1 1 60%}.opt .lead-dots{display:none}.opt .price{margin-left:auto}.opt .badge{flex-basis:100%;text-align:center;white-space:normal}}
 .example{margin-top:16px;font-size:15.5px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
 .example b{font-family:var(--latin);font-size:22px;font-weight:500;letter-spacing:.02em;color:var(--ink)}
+/* 値段の数字を今の形に(古い形の数字は0がoに見えて読みにくい・10/18えいじさん) */
+.menu-price .yen,.opt .price,.example b,.gal-no,.gal-count,.lb-cap b,.omakase li::before{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
 .compare{
   margin-top:clamp(18px,2.4vw,28px);padding:22px clamp(20px,3vw,30px);
   border-left:2px solid var(--gold);background:linear-gradient(90deg,rgba(214,196,150,.16),transparent);
